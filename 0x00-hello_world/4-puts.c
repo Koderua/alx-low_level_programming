@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
-* This function prints out
+* main - This function prints out the string
 * "Programming is like building a multilingual puzzle
-* Return: 0
+* Return: Function returns 0
 */
 int main(void)
 {
