@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
-* main - function prints out 
+* main - function
+* Description:
 * Return: returns 0
 */
 int main(void)
@@ -17,6 +18,6 @@ int main(void)
 			putchar(32);
 		}
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
