@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
-* main - this function checks whether a random number assigned to n
-* is positive or negative
-* Return: the function returns 0
+* main - this function generates random number n
+* and checks whether it is positive or negative
+* Return: return is 0
 */
 int main(void)
 {
