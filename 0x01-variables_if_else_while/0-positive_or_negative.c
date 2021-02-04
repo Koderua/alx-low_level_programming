@@ -1,13 +1,12 @@
-/**#include <stdlib.h>
+#include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
 /**
- * my_function
- * main - This function generates a random integer n, prints it, and states
- * whether it’s positive, zero, or negative.
- * Return: This function returns 0.
+main - This function generates a random integer n, prints it, and states 
+whether it’s positive, zero, or negative.
+* Return: This function returns 0.
 */
 int main(void)
 {
