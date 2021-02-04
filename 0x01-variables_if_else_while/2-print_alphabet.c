@@ -4,7 +4,7 @@
 * main - function prints out the alphabet in lowercase
 * Return: returns 0
 */
-int main()
+int main(void)
 {
 	char c;
 
