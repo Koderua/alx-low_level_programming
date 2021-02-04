@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - function prints out 
-* Return: returns 0
+* main - this is the main function
+* Description: It returns numbers from 00 to 99 with coma and space in between
+* Return: Function returns 0
 */
 int main(void)
 {
