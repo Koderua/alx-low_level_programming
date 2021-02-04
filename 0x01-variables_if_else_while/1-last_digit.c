@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
-* main - this is the only function
-* Description: It will print the last digit of the number stored in n
+* main - function will print the last digit
+* of the number stored in variable n
 * Return: The function returns 0
 */
 int main(void)
