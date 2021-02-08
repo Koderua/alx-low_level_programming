@@ -1,6 +1,6 @@
 #include <holberton.h>
 
-_putchar(char c)
+_putchar()
 
 int main(void) 
 { 
