@@ -1,7 +1,5 @@
 #include <holberton.h>
 
-_putchar()
-
 int main(void) 
 { 
       char c1='H'; 
