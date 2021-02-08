@@ -1,6 +1,6 @@
 #include <holberton.h>
 
-int main(void) 
+int main() 
 { 
       char c1='H'; 
       char c2='o';
