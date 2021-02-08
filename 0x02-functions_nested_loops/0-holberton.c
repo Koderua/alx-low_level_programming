@@ -2,7 +2,7 @@
 
 _putchar(char c)
 
-int main() 
+int main(void) 
 { 
       char c1='H'; 
       char c2='o';
