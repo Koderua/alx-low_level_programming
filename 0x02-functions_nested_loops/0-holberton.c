@@ -24,5 +24,5 @@ _putchar(c8);
 _putchar(c9);
 _putchar(c10);
 
-return(0);
+return (0);
 }
