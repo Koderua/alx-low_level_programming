@@ -7,12 +7,10 @@
 
 int _putchar(char c)
 
+return (write1, &c, 1));
+}
 /**
 *Prototype for 
 *0-holberton.c
 */
-int _putchar(char c)
-{
-return (write(1, &c, 1));
-}
-int main(void)
+#include "_putchar"
