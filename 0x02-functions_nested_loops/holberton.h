@@ -11,7 +11,8 @@ int _putchar(char c)
 *Prototype for 
 *0-holberton.c
 */
-
-#include <holberton.h>
-
+int _putchar(char c)
+{
+return (write(1, &c, 1));
+}
 int main(void)
