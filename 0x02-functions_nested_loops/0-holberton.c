@@ -1,3 +1,7 @@
+/**
+*_putchar
+*/
+
 #include "holberton.h"
 
 int main(void)
