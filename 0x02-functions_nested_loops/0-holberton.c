@@ -2,6 +2,7 @@
 
 /**
 * main - _putchar fn
+* Return - 0
 */
 int main(void)
 {
