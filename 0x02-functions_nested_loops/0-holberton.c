@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
-* main - _putchar fn
-* Return - 0
+* main - prints out fn
+* Return: 0
 */
 int main(void)
 {
