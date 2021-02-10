@@ -1,9 +1,8 @@
-/**
-*main
-*/
-
 #include "holberton.h"
 
+/**
+*_putchar
+*/
 int main(void)
 {
 	_putchar('H');
