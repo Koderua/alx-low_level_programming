@@ -1,5 +1,5 @@
 /**
-*Prototype for 
+*Prototype for
 *_putchar
 *0-holberton.c
 */
