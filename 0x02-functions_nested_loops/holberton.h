@@ -1,5 +1,5 @@
 /**
-*_putchar sth char c sth
+*_putchar - sth c sth
 */
 int _putchar(char c);
 
