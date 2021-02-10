@@ -1,5 +1,5 @@
 /**
-*_putchar
+*main
 */
 
 #include "holberton.h"
