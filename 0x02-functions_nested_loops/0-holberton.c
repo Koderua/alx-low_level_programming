@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-*_putchar
+*main
 */
 int main(void)
 {
