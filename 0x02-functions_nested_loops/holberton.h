@@ -1,5 +1,5 @@
 /**
-* _putchar - writes the character c to stdout
+* _putchar
 */
 int _putchar(char c);
 
