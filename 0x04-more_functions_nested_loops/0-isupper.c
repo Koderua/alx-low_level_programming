@@ -2,13 +2,13 @@
 
 /**
  * _isupper - checks ABC
- * @c - parameter
- * Return: returns 1 or 0
+ * @c: parameter
+ * Return: returns 0 or 1
  */
 int _isupper(int c)
 {
-    if (c >= 'A' and c <= 'Z')
-        retuen (1);
-    else
-        return (0);
+if (c >= 'A' and c <= 'Z')
+return (1);
+else
+return (0);
 }
