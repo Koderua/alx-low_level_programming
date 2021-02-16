@@ -1,12 +1,14 @@
 #include "holberton.h"
 /**
  *swap_int - swaps
- *@p: par
- *@q: par
+ *@a: par
+ *@b: par
  *Return: void
  */
-void swap_int(int *p, int *q)
+void swap_int(int *a, int *b)
 {
-*p = b;
-*q = a;
+int c;
+c = *a;
+*a = *b;
+*b = c;
 }
