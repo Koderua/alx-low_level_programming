@@ -1,0 +1,6 @@
+#include "holberton.h"
+void swap_int(int *p, int *q)
+{
+*p = b;
+*q = a;
+}
