@@ -1,17 +1,18 @@
 #include "holberton.h"
+
 /**
-*_strlen - returns strlen
-*@s: par
-*Return: int
+* _strlen - returns strlen
+* @s: par
+* Return: int
 */
 int _strlen(char *s)
 {
-int i;
-int c;
-for (i = 0; s[i] != '\0'; i++)
-{
-i++;
-}
-c = i;
-return (c);
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
 }
