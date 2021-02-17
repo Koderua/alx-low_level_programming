@@ -10,7 +10,7 @@ int i;
 int c;
 for (i = 0; s[i] != '\0'; i++)
 {
-return (i);
+i++;
 }
 c = i;
 return (c);
