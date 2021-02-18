@@ -2,6 +2,11 @@
 #define HOLBERTON_H
 
 /**
+* _putchar
+*/
+int _putchar(char c);
+
+/**
  *reset_to_98
 */
 void reset_to_98(int *n);
