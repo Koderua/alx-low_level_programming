@@ -6,10 +6,10 @@
  *@n: p3
  *Return: s
  */
-_memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-char *s;
 const char b;
+int *s;
 int i;
 int n;
 s = &n
