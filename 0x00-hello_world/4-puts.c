@@ -1,5 +1,6 @@
 #!/bin/bash
-int main(void)
+#include <stdio.h>
+int main()
 {
 char Mystr[] = "\"Programming is like building a multilingual puzzle";
 puts(Mystr);
