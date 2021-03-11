@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <holberton.h>
 /**
  *positive_or_negative - function
  *@n: parameter
