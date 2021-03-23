@@ -2,46 +2,40 @@
 
 /**
  * insert_nodeint_at_index - inserts a new node at a given position
- *
- * @head: double pointer to head node
- * @idx: index at which to insert new node
- * @n: int data value for new node
- * Return: address of new node or NULL if operation fails
+ * @head: double pointer to head of list
+ * @idx: index to add new node
+ * @n: value at new node
+ * Return: address of new node, or NULL if failed
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new_node = malloc(sizeof(listint_t)), *temp, *prev_node;
-	unsigned int i = 0;
+	listint_t *current;
+	listint_t *newNode;
 
-	if (!new_node)
-	{
-		free(new_node);
+	register uint i;
+
+	newNode = malloc(sizeof(listint_t));
+	if (!head || !newNode)
 		return (NULL);
-	}
-	temp = *head;
-	new_node->n = n;
-	if (i == idx)
+	newNode->n = n;
+	if (!idx)
 	{
-		new_node->next = temp;
-		return (new_node);
+		newNode->next = *head;
+		*head = newNode;
+		return (newNode);
 	}
-	while (temp->next)
+	current = *head;
+	while (current)
 	{
-		if (i == idx)
+		if (i == idx - 1)
 		{
-			prev_node->next = new_node;
-			new_node->next = temp;
-			return (new_node);
+			newNode->next = current->next;
+			current->next = newNode;
+			return (newNode);
 		}
 		i++;
-		prev_node = temp;
-		temp = temp->next;
-		if (!temp && i == idx)
-		{
-			prev_node->next = new_node;
-			new_node->next = NULL;
-			return (new_node);
-		}
+		current = current->next;
 	}
+	free(newNode);
 	return (NULL);
 }
