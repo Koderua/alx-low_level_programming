@@ -5,8 +5,6 @@
 * @s: par
 * Return: int
 */
-// Online C compiler to run C program online
-#include <stdio.h>
 
 int _strlen(char *s)
 {
