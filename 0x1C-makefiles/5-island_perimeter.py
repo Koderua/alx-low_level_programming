@@ -1,34 +1,54 @@
 #!/usr/bin/python3
-"""Contains function that returns the perimeter of the 
-island described in grid
+
+"""
+    contains island_perimeter
 """
 
-def determine_soroundings(array, y, x):
-    """Determines whether soroundings has water or not
-    also if it's next or previous is at the ends
-    Args:
-        array (list): grid
-        y (int): current list index in `array`
-        x (int): current index in the list in `array`
-    """
-    mask = 1
-    top = array[y - 1][x] ^ mask if y > 0 else 1
-    bottom = array[y + 1][x] ^ mask if y < (len(array) - 1) else 1
-    left = array[y][x - 1] ^ mask if x > 0 else 1
-    right = array[y][x + 1] ^ mask if x < (len(array[y]) - 1) else 1
-    positions = top + bottom + right + left
-    return positions
 
 def island_perimeter(grid):
-    """Gets the perimeter determined by sorounding.
-    all sides that do not have water we increase perimeter.
-    Args:
-        grid (list): list of lists
     """
-    land = 1
-    perimeter = 0
-    for i in range(len(grid)):
-        for j, x in enumerate(grid[i]):
-            if x == land:
-                perimeter += determine_soroundings(grid, i, j)
-    return perimeter
+        computes the perimeter of an 'island' in a grid
+        0 represents water zone
+        1 represents land zone
+        one cell in the grid represents a square piece of land of length 1
+    """
+    tile_perimeter = 4
+    total_permimeter = 0
+    for row in range(len(grid)):
+        for col in range(len(grid[row])):
+            if grid[row][col] == 1:
+                total_permimeter += tile_perimeter
+                borders = get_borders(col, row, grid)
+                total_permimeter -= borders
+    return total_permimeter
+
+
+def get_borders(col, row, grid):
+    """
+        returns the border of a cell with it's neighboring cells
+    """
+    vertical_borders = 0
+    horizontal_borders = 0
+    if (row - 1) >= 0:
+        if grid[row - 1][col]:
+            vertical_borders += 1
+    if (row + 1) < len(grid):
+        if grid[row + 1][col]:
+            vertical_borders += 1
+    if (col - 1) >= 0:
+        if grid[row][col - 1]:
+            horizontal_borders += 1
+    if (col + 1) < len(grid[row]):
+        if grid[row][col + 1]:
+            horizontal_borders += 1
+    return vertical_borders + horizontal_borders
+
+if __name__ == "__main__":
+    grid = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 1, 1, 0],
+        [0, 1, 0, 0, 1, 0],
+        [0, 1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0]
+    ]
+    print(island_perimeter(grid))
