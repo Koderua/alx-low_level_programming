@@ -1,49 +1,34 @@
 #!/usr/bin/python3
-"""
-    Contains the definition of the island_perimeter function that returns the
-    perimeter of the island described in 'grid'.
-
-    grid is a list of list of integers:
-        0 represents a water zone
-        1 represents a land zone
-        One cell is a square with side length 1
-        Grid cells are connected horizontally/vertically (not diagonally).
-        Grid is rectangular, width and height don’t exceed 100
-    Grid is completely surrounded by water and there is 1 island (or nothing).
-    The island doesn’t have “lakes” (water inside that isn’t connected to the
-    water around the island).
+"""Contains function that returns the perimeter of the 
+island described in grid
 """
 
+def determine_soroundings(array, y, x):
+    """Determines whether soroundings has water or not
+    also if it's next or previous is at the ends
+    Args:
+        array (list): grid
+        y (int): current list index in `array`
+        x (int): current index in the list in `array`
+    """
+    mask = 1
+    top = array[y - 1][x] ^ mask if y > 0 else 1
+    bottom = array[y + 1][x] ^ mask if y < (len(array) - 1) else 1
+    left = array[y][x - 1] ^ mask if x > 0 else 1
+    right = array[y][x + 1] ^ mask if x < (len(array[y]) - 1) else 1
+    positions = top + bottom + right + left
+    return positions
 
 def island_perimeter(grid):
-    """Returns the perimeter of the island as described by a grid.
-
-    grid is a list of list of integers:
-        0 represents a water zone
-        1 represents a land zone
-        One cell is a square with side length 1
-        Grid cells are connected horizontally/vertically (not diagonally).
-        Grid is rectangular, width and height don’t exceed 100
-    Grid is completely surrounded by water and there is 1 island (or nothing).
-    The island doesn’t have “lakes” (water inside that isn’t connected to the
-    water around the island).
+    """Gets the perimeter determined by sorounding.
+    all sides that do not have water we increase perimeter.
+    Args:
+        grid (list): list of lists
     """
-
+    land = 1
     perimeter = 0
-    for idx, val in enumerate(grid):
-        for idx2, val2 in enumerate(grid):
-            if grid[idx][idx2] == 1:
-                perimeter += 4
-                if idx != (len(grid) / len(val)) - 1:
-                    if grid[idx + 1][idx2] == 1:
-                        perimeter -= 1
-                if idx2 != len(val) - 1:
-                    if grid[idx][idx2 + 1] == 1:
-                        perimeter -= 1
-                if idx != 0:
-                    if grid[idx - 1][idx2] == 1:
-                        perimeter -= 1
-                if idx2 != 0:
-                    if grid[idx][idx2 - 1] == 1:
-                        perimeter -= 1
+    for i in range(len(grid)):
+        for j, x in enumerate(grid[i]):
+            if x == land:
+                perimeter += determine_soroundings(grid, i, j)
     return perimeter
