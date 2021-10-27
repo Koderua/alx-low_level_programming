@@ -1,7 +1,13 @@
 #include <stdio.h>
 
-int main(int argc __attribute__((unused)), char* argv[])
+/**
+ *main - function
+ *@argc: parameter
+ *@argv: parameter
+ *Return: 0
+ */
+int main(int argc __attribute__((unused)), char *argv[])
 {
-printf("%s",argv[0]);
+printf("%s", argv[0]);
 return (0);
 }
