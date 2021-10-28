@@ -8,11 +8,11 @@
  */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
-int i, sum = 0;
-for (i = 0; i < argc; i++)
+int i;
+while (i < argc)
 {
-sum += i;
+i++;
 }
-printf("%d\n", argc);
+printf("%d\n", --i);
 return (0);
 }
