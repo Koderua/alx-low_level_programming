@@ -1,4 +1,4 @@
-B#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  *main - FUNCTION
@@ -9,7 +9,7 @@ B#include <stdio.h>
 int main(int argc, char *argv[])
 {
 int i = 1, mul = 1;
-if (argc > 1)
+if (argc > 2)
 {
 mul = atoi(argv[i]) * atoi(argv[i + 1]);
 printf("%d\n", mul);
